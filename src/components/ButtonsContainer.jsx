@@ -6,12 +6,12 @@ const ButtonsContainer = () => {
 
     const getRandomJoke = async () => {
         const data = await jokeService()
-        console.log(data.content);
+        console.log(data);
     }
 
     const getRandomQuote = async () => {
         const data = await quoteService();
-        console.log(data.content);
+        console.log(data);
     }
 
   return (

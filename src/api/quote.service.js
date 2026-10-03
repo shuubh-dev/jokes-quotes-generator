@@ -1,10 +1,15 @@
 import api from './api.service.js'
 
 const quoteService = async () => {
-    const response = await api.get('./quotes')
-    const quotes = response.data.data.data
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
+    const response = await api.get(import.meta.env.VITE_QUOTE_API_URL)
+    const quote = response.data.quote
+    const author = response.data.author
+    console.log(response);
+
+    return {
+        quote,
+        author
+    }
 }
 
 export default quoteService;
