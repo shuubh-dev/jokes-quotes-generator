@@ -1,0 +1,26 @@
+.display-box {
+  width: 100%;
+  min-height: 280px;
+  display: grid;
+  padding: 16px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.display-box p {
+  margin: 0;
+  color: rgb(255 255 255 / 88%);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .display-box {
+    min-height: 240px;
+  }
+}

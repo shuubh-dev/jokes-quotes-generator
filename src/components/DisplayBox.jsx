@@ -1,10 +1,10 @@
-
+import "../styles/DisplayBox.css"
 
 const DisplayBox = () => {
   return (
-    <div>
-        DisplayBox
-    </div>
+    <section className="display-box" aria-live="polite">
+      <p>Choose a category to get started</p>
+    </section>
   )
 }
 

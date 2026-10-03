@@ -1,13 +1,13 @@
 import ButtonsContainer from "./ButtonsContainer"
 import DisplayBox from "./DisplayBox"
-
+import "../styles/MainContainer.css"
 
 const MainContainer = () => {
   return (
-    <div>
-        <DisplayBox/>
-        <ButtonsContainer/>
-    </div>
+    <main className="main-container">
+      <DisplayBox />
+      <ButtonsContainer />
+    </main>
   )
 }
 

@@ -1,10 +1,10 @@
-
+import "../styles/ButtonsContainer.css"
 
 const ButtonsContainer = () => {
   return (
-    <div>
-        <button>Quotes</button>
-        <button>Jokes</button>
+    <div className="buttons-container">
+      <button className="content-button" type="button">Quotes</button>
+      <button className="content-button" type="button">Jokes</button>
     </div>
   )
 }
