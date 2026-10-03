@@ -1,17 +1,17 @@
 import "../styles/DisplayBox.css"
 
 const DisplayBox = ({ content }) => {
-    if(!content)
-        return null;
 
   return (
     <section className="display-box" aria-live="polite">
-        <p> {content.joke  &&  <span>{content.joke}</span>} </p>
-        <p> {content.setup  &&  <span>{content.setup}</span>} </p>
-        <p> {content.delivery  &&  <span>{content.delivery}</span>} </p>
-
-        <p> {content.quote  &&  <span>{content.quote}</span>} </p>
-        <p> {content.author  &&  <span>- {content.author}</span>} </p>
+      <div className="display-content">
+        {!content && <p className="display-text">Choose a category to get started!!!</p>}
+        {content?.joke && <p className="display-text">{content.joke}</p>}
+        {content?.setup && <p className="display-text">{content.setup}</p>}
+        {content?.delivery && <p className="display-text">{content.delivery}</p>}
+        {content?.quote && <p className="display-text">{content.quote}</p>}
+        {content?.author && <p className="display-author">- {content.author}</p>}
+      </div>
     </section>
   )
 }
