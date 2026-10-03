@@ -4,9 +4,11 @@ const jokeService = async () => {
     const response = await api.get(import.meta.env.VITE_JOKE_API_URL)
     console.log(response);
 
-    if(response.data.joke) {
+    if(response.data.type === 'single') {
+        const joke = response.data.joke
+        
         return {
-            joke: response.data.joke
+            joke
         };
     }
     else {

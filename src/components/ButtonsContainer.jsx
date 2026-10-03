@@ -2,16 +2,15 @@ import jokeService from "../api/joke.service"
 import quoteService from "../api/quote.service"
 import "../styles/ButtonsContainer.css"
 
-const ButtonsContainer = () => {
-
+const ButtonsContainer = ({ displayContent }) => {
     const getRandomJoke = async () => {
-        const data = await jokeService()
-        console.log(data);
+        const data = await jokeService();
+        displayContent(data)
     }
 
     const getRandomQuote = async () => {
         const data = await quoteService();
-        console.log(data);
+        displayContent(data)
     }
 
   return (

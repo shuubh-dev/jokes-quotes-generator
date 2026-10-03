@@ -4,7 +4,6 @@ const quoteService = async () => {
     const response = await api.get(import.meta.env.VITE_QUOTE_API_URL)
     const quote = response.data.quote
     const author = response.data.author
-    console.log(response);
 
     return {
         quote,
